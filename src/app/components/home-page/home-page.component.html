@@ -1,0 +1,39 @@
+<nav class="main-navigation">
+    <div class="navbar-header animated fadeInUp">
+        <a class="navbar-brand" href="#">Home Page</a>
+    </div>
+    <ul class="nav-list">
+        <li class="nav-list-item">
+            <button  class="btn btn-primary" (click)="logout()">LogOut</button>
+        </li>
+        <li class="nav-list-item">
+            <button class="btn btn-primary"  (click)="showOrHideChangePasswordForm()" >Change Password</button>
+        </li>
+    </ul>
+
+</nav>
+
+
+<div class="container register-form" [hidden]="isFormHidden">
+    <div class="form">
+        <div class="note">
+            <p>Change Password</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="NewPassword" [(ngModel)]="password">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btnSubmit" (click)="changePassword()">change Password</button>
+            <button type="button" class="btnSubmit" (click)="showOrHideChangePasswordForm()" >Home Page</button>
+
+        </div>
+        <div class="alert alert-success" role="alert" *ngIf="infoMessage">
+            Password Updated
+        </div>
+    </div>
+</div>
