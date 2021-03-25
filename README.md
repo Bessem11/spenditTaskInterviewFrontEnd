@@ -1,6 +1,13 @@
 # SpenditFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+For the FrontEnd:
+
+The Angular is based on the MVVM architecture and so we have also 3 main component
+  -Views: Components that are responsible for rendering the UI
+  -Services: Responsible for sending requests to the BackEnd
+  -Models: Represents the abstraction of the real-world entities
+  -Each View has its corresponding TypeScript file where we can manage the input data and use the different services
 
 ## Development server
 
